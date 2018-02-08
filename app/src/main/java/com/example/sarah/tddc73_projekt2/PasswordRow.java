@@ -15,9 +15,6 @@ import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-/**
- * Created by Sarah on 2018-02-02.
- */
 
 public class PasswordRow extends LinearLayout implements AccountRow {
 
@@ -36,7 +33,6 @@ public class PasswordRow extends LinearLayout implements AccountRow {
     public void setCheck(Check check) {
         this.check = check;
     }
-
 
     //Constructor for password row.
     public PasswordRow(Context context, String inputText) {

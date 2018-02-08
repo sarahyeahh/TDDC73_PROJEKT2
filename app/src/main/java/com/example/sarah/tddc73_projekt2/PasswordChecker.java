@@ -57,7 +57,6 @@ public class PasswordChecker implements CheckField{
         String specialRegex = ".*[:;!@#$%&*()_+=|<>¤/´`?{}\\[\\]~-].*";
 
         System.out.println("LENGTH " + length);
-        System.out.println("LENGTH " +  checkLength);
 
         // 1. More than 8 characters
         if(length>8){
@@ -94,9 +93,6 @@ public class PasswordChecker implements CheckField{
             points++;
         }
 
-        System.out.println("POINTS " + points);
-        System.out.println("CHECK LENGTH " +  checkLength);
-
         if(points>2 && checkLength){
             checkPassword = true;
             System.out.println("CHECK PASSWORD " +  checkPassword);
@@ -109,8 +105,5 @@ public class PasswordChecker implements CheckField{
 
             return checkPassword;
         }
-
-
     }
-
 }

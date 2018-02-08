@@ -65,6 +65,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         layout.addView(description);
+        account.setLayoutParams(params);
         layout.addView(account);
         layout.addView(b);
         setContentView(layout);

@@ -15,14 +15,18 @@ public class Check extends LinearLayout{
 
     public Check(Context context) {
         super(context);
+
     }
 
     public void checkAndCall() {
+
         System.out.println("-------------------------------");
-        System.out.println( "Text checker " +  textCheck);
-        System.out.println( "Mail checker " +  mailCheck);
-        System.out.println( "Password checker " +  passwordCheck);
-       // System.out.println( "Listener " + listener);
+        //System.out.println( "Text checker " +  textCheck);
+        //System.out.println( "Mail checker " +  mailCheck);
+        //System.out.println( "Password checker " +  passwordCheck);
+        //System.out.println( "Listener " + listener);
+
+        System.out.println("Text checker: " +  textCheck +  " , Mail checker: " +  mailCheck + " , Password checker: " +  passwordCheck);
 
         if(textCheck && mailCheck && passwordCheck){
 
@@ -31,7 +35,7 @@ public class Check extends LinearLayout{
                 listener.canCreate();
             }
             else{
-                System.out.println("True, Did not work.");
+                //System.out.println("True, Did not work.");
             }
         }
         else{
@@ -40,7 +44,7 @@ public class Check extends LinearLayout{
                 listener.canNotCreate();
             }
             else{
-                System.out.println("False, Did not work. ");
+                //System.out.println("False, Did not work. ");
             }
         }
     }

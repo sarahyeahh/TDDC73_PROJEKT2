@@ -4,13 +4,11 @@ import android.content.Context;
 import android.text.Editable;
 import android.text.InputType;
 import android.text.TextWatcher;
+import android.view.Gravity;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-/**
- * Created by Sarah on 2018-02-02.
- */
 
 public class MailRow extends LinearLayout implements AccountRow{
 
@@ -34,11 +32,12 @@ public class MailRow extends LinearLayout implements AccountRow{
         check = new Check(context);
         setCheck(check);
 
-        layout = new LinearLayout(context);
-        layout.setOrientation(LinearLayout.VERTICAL);
-
         mailChecker = new MailChecker(context);
         setMailChecker(mailChecker);
+
+        layout = new LinearLayout(context);
+        layout.setOrientation(LinearLayout.VERTICAL);
+        LayoutParams params = new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT);
 
         //Create a new TextField
         TextView text = new TextView(context);
@@ -46,11 +45,11 @@ public class MailRow extends LinearLayout implements AccountRow{
 
         mail = new EditText(context);
         mail.setInputType(InputType.TYPE_TEXT_VARIATION_EMAIL_ADDRESS);
-        mail.setWidth(LayoutParams.MATCH_PARENT);
         mail.setSingleLine(true);
 
         layout.addView(text);
         layout.addView(mail);
+        layout.setLayoutParams(params);
         this.addView(layout);
 
         addListeners(context);

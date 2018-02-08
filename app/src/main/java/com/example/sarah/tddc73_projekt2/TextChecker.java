@@ -24,4 +24,5 @@ public class TextChecker implements CheckField {
 
         return checkUser;
     }
+
 }

@@ -1,8 +1,5 @@
 package com.example.sarah.tddc73_projekt2;
 
-/**
- * Created by Sarah on 2018-02-02.
- */
 
 public interface TheListener {
 

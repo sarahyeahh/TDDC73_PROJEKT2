@@ -13,9 +13,14 @@ public class TextRow extends LinearLayout implements AccountRow{
 
     LinearLayout layout;
     private EditText edit;
-    boolean theUser;
+    public boolean theUser;
 
     Check check;
+
+    public TextRow(Context context) {
+        super(context);
+    }
+
     public void setCheck(Check check) {
         this.check = check;
     }
@@ -35,8 +40,7 @@ public class TextRow extends LinearLayout implements AccountRow{
 
         layout = new LinearLayout(context);
         layout.setOrientation(LinearLayout.VERTICAL);
-        LayoutParams paramsW = new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.MATCH_PARENT);
-        paramsW.gravity = Gravity.CENTER;
+        LayoutParams params = new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT);
 
         //Imlement text checker
         textChecker = new TextChecker(context);
@@ -50,6 +54,7 @@ public class TextRow extends LinearLayout implements AccountRow{
         //Add text fields.
         layout.addView(text);
         layout.addView(edit);
+        layout.setLayoutParams(params);
         this.addView(layout);
         
         addListeners(context);
@@ -74,6 +79,7 @@ public class TextRow extends LinearLayout implements AccountRow{
                 String userName = edit.getText().toString();
                 //Check if EditText is filled correctly
                 theUser = textChecker.checkField(userName);
+                System.out.println( "THE USER AFTER TEXT" + theUser);
 
                 //Set background color to red until it is correct
                 edit.setBackgroundColor(0x80ff0000); //Opaque red
