@@ -15,7 +15,6 @@ public class Check extends LinearLayout{
 
     public Check(Context context) {
         super(context);
-
     }
 
     public void checkAndCall() {
@@ -47,6 +46,7 @@ public class Check extends LinearLayout{
                 //System.out.println("False, Did not work. ");
             }
         }
+
     }
 
     public void setOnPandClickListener(TheListener listener) {
@@ -64,4 +64,6 @@ public class Check extends LinearLayout{
     public void passwordReceive(boolean thePassword) {
         passwordCheck = thePassword;
     }
+
+
 }

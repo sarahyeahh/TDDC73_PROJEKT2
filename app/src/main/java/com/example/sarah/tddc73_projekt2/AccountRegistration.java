@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 public class AccountRegistration extends LinearLayout {
 
-    ArrayList<AccountRow> data;
+    ArrayList<AccountRow> rows;
 
     public AccountRegistration(Context context){
         super(context);
@@ -15,11 +15,12 @@ public class AccountRegistration extends LinearLayout {
         LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
         this.setLayoutParams(layoutParams);
 
-        data = new ArrayList<AccountRow>();
+        rows = new ArrayList<AccountRow>();
     }
 
-    public void addRow(AccountRow row){
-        data.add(row);
-        addView(row.getData());
+    public void addRow(AccountRow newRow){
+        rows.add(newRow);
+        addView(newRow.getData());
     }
+
 }

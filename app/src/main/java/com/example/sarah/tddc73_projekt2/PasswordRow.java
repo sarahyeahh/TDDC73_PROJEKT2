@@ -74,6 +74,8 @@ public class PasswordRow extends LinearLayout implements AccountRow {
         this.addView(layout);
 
         addListeners(context);
+
+        System.out.println("PasswordRow: " +  thePassword);
     }
 
     private void addListeners(final Context context) {
@@ -106,6 +108,7 @@ public class PasswordRow extends LinearLayout implements AccountRow {
                 LayerDrawable stars = (LayerDrawable) r.getProgressDrawable();
                 stars.getDrawable(2).setColorFilter(starColor, PorterDuff.Mode.SRC_ATOP);
 
+                //Send to the class Check
                 send();
             }
 

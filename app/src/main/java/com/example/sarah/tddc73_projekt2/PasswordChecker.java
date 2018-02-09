@@ -95,14 +95,12 @@ public class PasswordChecker implements CheckField{
 
         if(points>2 && checkLength){
             checkPassword = true;
-            System.out.println("CHECK PASSWORD " +  checkPassword);
-
+            System.out.println("Password " + checkPassword);
             return checkPassword;
         }
         else{
             checkPassword = false;
-            System.out.println("CHECK PASSWORD " +  checkPassword);
-
+            System.out.println("Password " + checkPassword);
             return checkPassword;
         }
     }

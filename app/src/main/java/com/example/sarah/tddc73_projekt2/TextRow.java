@@ -3,7 +3,6 @@ package com.example.sarah.tddc73_projekt2;
 import android.content.Context;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.view.Gravity;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -16,13 +15,12 @@ public class TextRow extends LinearLayout implements AccountRow{
     public boolean theUser;
 
     Check check;
+    public void setCheck(Check check) {
+        this.check = check;
+    }
 
     public TextRow(Context context) {
         super(context);
-    }
-
-    public void setCheck(Check check) {
-        this.check = check;
     }
 
     //Add text checker.
@@ -58,6 +56,8 @@ public class TextRow extends LinearLayout implements AccountRow{
         this.addView(layout);
         
         addListeners(context);
+
+        System.out.println("TextRow: " +  theUser);
     }
 
     private void addListeners(final Context context) {
@@ -79,7 +79,6 @@ public class TextRow extends LinearLayout implements AccountRow{
                 String userName = edit.getText().toString();
                 //Check if EditText is filled correctly
                 theUser = textChecker.checkField(userName);
-                System.out.println( "THE USER AFTER TEXT" + theUser);
 
                 //Set background color to red until it is correct
                 edit.setBackgroundColor(0x80ff0000); //Opaque red
@@ -90,6 +89,7 @@ public class TextRow extends LinearLayout implements AccountRow{
                 else{
                     Toast.makeText(context, "There has to be a Username", Toast.LENGTH_SHORT).show();
                 }
+                //Send to the class Check
                 send();
             }
         });

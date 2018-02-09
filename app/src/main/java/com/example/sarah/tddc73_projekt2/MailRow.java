@@ -53,6 +53,7 @@ public class MailRow extends LinearLayout implements AccountRow{
         this.addView(layout);
 
         addListeners(context);
+
     }
 
     private void addListeners(Context context) {
@@ -86,6 +87,7 @@ public class MailRow extends LinearLayout implements AccountRow{
                 else{
                     //Do nothing?
                 }
+                //Send to the class Check
                 send();
             }
         });
